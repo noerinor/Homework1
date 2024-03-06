@@ -4,39 +4,39 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("1.Отобразить Пи разными способами");
+            Console.WriteLine("1.Вiдобразити число Пi рiзними способами");
             Console.WriteLine("-----------------------");
             VariablePi();
 
 
 
-            static void VariablePi() /*1.Отобразить Пи разными способами*/
+            static void VariablePi() /*1.Вiдобразити число Пi рiзними способами*/
             {
 
 
                 float pi = (float)Math.PI;
-                Console.WriteLine("Число пи: " + Math.PI);
+                Console.WriteLine("Число пi: " + Math.PI);
 
 
                 double Pi = Math.PI;
-                Console.WriteLine("Число Пи: " + pi);
+                Console.WriteLine("Число Пi: " + pi);
 
             }
             Console.WriteLine("--------------------------");
             Console.WriteLine("2. Характеристики Пк");
             Console.WriteLine("--------------------------");
+
             SystemSpec();
 
             static void SystemSpec() /*2.Характерристики ПК*/
             {
-                Console.WriteLine("операционная система: " + Environment.OSVersion);
+                Console.WriteLine("OC: " + Environment.OSVersion);
                 Console.WriteLine("пользователь: " + Environment.UserName);
-                Console.WriteLine("Текущая дериктория: " + Environment.CurrentDirectory);
-                Console.WriteLine("количество процессоров: " + Environment.ProcessorCount);
+                Console.WriteLine("Поточна дериктория: " + Environment.CurrentDirectory);
             }
 
             Console.WriteLine("--------------------------");
-            Console.WriteLine("3. Сантиметры в метры");
+            Console.WriteLine("3. Сантиметри в метри");
             Console.WriteLine("--------------------------");
 
             SentimetersToMeters();
@@ -86,7 +86,7 @@
 
                 int numberOfSquares = areaRectangle / areaSquare;
 
-                Console.WriteLine("Из прямокутника можно вырезать " + numberOfSquares + " квадратов");
+                Console.WriteLine(numberOfSquares + " квадратов");
             }
 
             Console.WriteLine("--------------------------");
@@ -170,9 +170,6 @@
                 Console.WriteLine("Ваш вік: " + age);
 
             }
-
-
-
 
             Console.WriteLine("--------------------------");
             Console.WriteLine("11.Конвертор валюти");
