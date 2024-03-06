@@ -1,0 +1,225 @@
+﻿namespace Homework1
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("1.Отобразить Пи разными способами");
+            Console.WriteLine("-----------------------");
+            VariablePi();
+
+
+
+            static void VariablePi() /*1.Отобразить Пи разными способами*/
+            {
+
+
+                float pi = (float)Math.PI;
+                Console.WriteLine("Число пи: " + Math.PI);
+
+
+                double Pi = Math.PI;
+                Console.WriteLine("Число Пи: " + pi);
+
+            }
+            Console.WriteLine("--------------------------");
+            Console.WriteLine("2. Характеристики Пк");
+            Console.WriteLine("--------------------------");
+            SystemSpec();
+
+            static void SystemSpec() /*2.Характерристики ПК*/
+            {
+                Console.WriteLine("операционная система: " + Environment.OSVersion);
+                Console.WriteLine("пользователь: " + Environment.UserName);
+                Console.WriteLine("Текущая дериктория: " + Environment.CurrentDirectory);
+                Console.WriteLine("количество процессоров: " + Environment.ProcessorCount);
+            }
+
+            Console.WriteLine("--------------------------");
+            Console.WriteLine("3. Сантиметры в метры");
+            Console.WriteLine("--------------------------");
+
+            SentimetersToMeters();
+
+            static void SentimetersToMeters() /*3. Сантиметры в метры*/
+            {
+                Console.WriteLine("введите сантиметры:");
+                double centimeters = Convert.ToDouble(Console.ReadLine());
+                double meters = centimeters / 100;
+                Console.WriteLine("Будет " + meters + " метров");
+            }
+
+            Console.WriteLine("--------------------------");
+            Console.WriteLine("4. 234 дней в полные недели");
+            Console.WriteLine("--------------------------");
+
+            WeeksInDays();
+
+            static void WeeksInDays() /*4. 234 дней в полные недели*/
+            {
+
+                int days = 234;
+
+                int weeks = days / 7;
+
+                Console.WriteLine("За " + days + " дней прошло " + weeks + " недель");
+
+
+            }
+
+            Console.WriteLine("--------------------------");
+            Console.WriteLine("5.Прямоугольник размерами 543 х 130 мм. Скільки квадратів зі стороною 130 мм можна з нього вирізати? ");
+            Console.WriteLine("--------------------------");
+
+            RectangleDementions();
+
+            static void RectangleDementions() /*5. Наведено прямокутник з розмірами 543 х 130 мм. Скільки квадратів зі стороною 130 мм можна з нього вирізати?*/
+            {
+
+
+                int lengthRectangle = 543;
+                int widthRectangle = 130;
+                int sideSquare = 130;
+
+                int areaRectangle = lengthRectangle * widthRectangle;
+                int areaSquare = sideSquare * sideSquare;
+
+                int numberOfSquares = areaRectangle / areaSquare;
+
+                Console.WriteLine("Из прямокутника можно вырезать " + numberOfSquares + " квадратов");
+            }
+
+            Console.WriteLine("--------------------------");
+            Console.WriteLine("6. Середне арифметичне двух чисел ");
+            Console.WriteLine("--------------------------");
+
+
+            MiddleNumber();
+
+            static void MiddleNumber() /*6. Середне арифметичне двух чисел*/
+            {
+
+                Console.Write("Первое число:");
+                double number1 = Convert.ToDouble(Console.ReadLine());
+
+                Console.Write("Второе число:");
+                double number2 = Convert.ToDouble(Console.ReadLine());
+
+                double average = (number1 + number2) / 2;
+
+                Console.WriteLine("Середнє арифметичне " + average);
+            }
+
+            Console.WriteLine("--------------------------");
+            Console.WriteLine("7.Квадрат числа ");
+            Console.WriteLine("--------------------------");
+
+            SquareNumber();
+
+            static void SquareNumber() /*7.Квадрат числа*/
+            {
+
+                Console.WriteLine("Введите число:");
+                double number = Convert.ToDouble(Console.ReadLine());
+
+                double square = Math.Pow(number, 2);
+
+                Console.WriteLine("Квадрат числа " + number + " равно " + square);
+            }
+
+            Console.WriteLine("--------------------------");
+            Console.WriteLine("8.Створіть програму, яка запитує в користувача два числа та виводить на екран їх суму, різницю, добуток та частку. ");
+            Console.WriteLine("--------------------------");
+
+            TwoNumbersSum();
+
+            static void TwoNumbersSum() /*8.Створіть програму, яка запитує в користувача два числа та виводить на екран їх суму, різницю, добуток та частку.*/
+            {
+                Console.WriteLine("Первое число:");
+                double number1 = Convert.ToDouble(Console.ReadLine());
+
+                Console.WriteLine("Второе число:");
+                double number2 = Convert.ToDouble(Console.ReadLine());
+
+                Console.WriteLine("Сума: " + (number1 + number2));
+                Console.WriteLine("Різниця: " + (number1 - number2));
+                Console.WriteLine("Добуток: " + (number1 * number2));
+                Console.WriteLine("Частка: " + (number1 / number2));
+
+            }
+
+
+            Console.WriteLine("--------------------------");
+            Console.WriteLine("9. Створіть програму, яка запитує в користувача його рік народження та обчислює його вік.");
+            Console.WriteLine("--------------------------");
+
+            YearOfBirth();
+
+            static void YearOfBirth() /*9. Створіть програму, яка запитує в користувача його рік народження та обчислює його вік.*/
+            {
+
+                Console.WriteLine("Год рождения:");
+
+                int yearOfBirth = Convert.ToInt32(Console.ReadLine());
+
+                int currentYear = DateTime.Now.Year;
+
+                int age = currentYear - yearOfBirth;
+
+
+                Console.WriteLine("Ваш вік: " + age);
+
+            }
+
+
+
+
+            Console.WriteLine("--------------------------");
+            Console.WriteLine("11.Конвертор валюти");
+            Console.WriteLine("--------------------------");
+
+            HypotenuseSquare();
+
+            static void HypotenuseSquare() /*11.Конвертор валюти*/
+            {
+
+                Console.WriteLine("Кількість долларів:");
+                double dollars = Convert.ToDouble(Console.ReadLine());
+
+                double exchangeRate = 38.23;
+
+                double uah = dollars * exchangeRate;
+
+                Console.WriteLine(uah + " Гривень");
+            }
+
+
+            Console.WriteLine("--------------------------");
+            Console.WriteLine("12.Створіть програму, яка запитує в користувача його зріст у футах та дюймах");
+            Console.WriteLine("--------------------------");
+
+
+            UsaSystemtoCm();
+
+            static void UsaSystemtoCm() /*12.Створіть програму, яка запитує в користувача його зріст у футах та дюймах*/
+            {
+
+                Console.Write("Зріст у футах:");
+                double feet = Convert.ToDouble(Console.ReadLine());
+
+                Console.WriteLine("Зріст у дюймах:");
+                double inches = Convert.ToDouble(Console.ReadLine());
+
+                double cmPerFoot = 30.48;
+                double cmPerInch = 2.54;
+
+                double totalHeightCm = (feet * cmPerFoot) + (inches * cmPerInch);
+
+                Console.WriteLine("Ваш зріст у сантиметрах: " + totalHeightCm);
+            }
+
+
+
+        }
+    }
+}
