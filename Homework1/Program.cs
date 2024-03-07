@@ -43,10 +43,17 @@
 
             static void SentimetersToMeters() /*3. Сантиметры в метры*/
             {
-                Console.WriteLine("введите сантиметры:");
-                double centimeters = Convert.ToDouble(Console.ReadLine());
-                double meters = centimeters / 100;
-                Console.WriteLine("Будет " + meters + " метров");
+                try
+                {
+                    Console.WriteLine("Введите сантиметры:");
+                    double centimeters = Convert.ToDouble(Console.ReadLine());
+                    double meters = centimeters / 100;
+                    Console.WriteLine("буде " + meters + " метров");
+                }
+                catch (FormatException)
+                {
+                    Console.WriteLine("введіть число.");
+                }
             }
 
             Console.WriteLine("--------------------------");
@@ -100,6 +107,7 @@
             {
 
                 Console.Write("Первое число:");
+
                 double number1 = Convert.ToDouble(Console.ReadLine());
 
                 Console.Write("Второе число:");
