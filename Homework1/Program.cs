@@ -105,17 +105,24 @@
 
             static void MiddleNumber() /*6. Середне арифметичне двух чисел*/
             {
+                try
+                {
+                    Console.Write("Первое число:");
 
-                Console.Write("Первое число:");
+                    double number1 = Convert.ToDouble(Console.ReadLine());
 
-                double number1 = Convert.ToDouble(Console.ReadLine());
+                    Console.Write("Второе число:");
+                    double number2 = Convert.ToDouble(Console.ReadLine());
 
-                Console.Write("Второе число:");
-                double number2 = Convert.ToDouble(Console.ReadLine());
+                    double average = (number1 + number2) / 2;
 
-                double average = (number1 + number2) / 2;
+                    Console.WriteLine("Середнє арифметичне " + average);
+                }
+                catch (FormatException)
+                {
+                    Console.WriteLine("введіть число.");
+                }
 
-                Console.WriteLine("Середнє арифметичне " + average);
             }
 
             Console.WriteLine("--------------------------");
@@ -126,13 +133,21 @@
 
             static void SquareNumber() /*7.Квадрат числа*/
             {
+                try
+                {
+                    Console.WriteLine("Введите число:");
+                    double number = Convert.ToDouble(Console.ReadLine());
 
-                Console.WriteLine("Введите число:");
-                double number = Convert.ToDouble(Console.ReadLine());
+                    double square = Math.Pow(number, 2);
 
-                double square = Math.Pow(number, 2);
+                    Console.WriteLine("Квадрат числа " + number + " равно " + square);
+                }
+                catch (FormatException)
+                {
+                    Console.WriteLine("введіть число.");
+                }
 
-                Console.WriteLine("Квадрат числа " + number + " равно " + square);
+
             }
 
             Console.WriteLine("--------------------------");
@@ -143,16 +158,28 @@
 
             static void TwoNumbersSum() /*8.Створіть програму, яка запитує в користувача два числа та виводить на екран їх суму, різницю, добуток та частку.*/
             {
-                Console.WriteLine("Первое число:");
-                double number1 = Convert.ToDouble(Console.ReadLine());
 
-                Console.WriteLine("Второе число:");
-                double number2 = Convert.ToDouble(Console.ReadLine());
+                try
+                {
+                    Console.WriteLine("Первое число:");
+                    double number1 = Convert.ToDouble(Console.ReadLine());
 
-                Console.WriteLine("Сума: " + (number1 + number2));
-                Console.WriteLine("Різниця: " + (number1 - number2));
-                Console.WriteLine("Добуток: " + (number1 * number2));
-                Console.WriteLine("Частка: " + (number1 / number2));
+                    Console.WriteLine("Второе число:");
+                    double number2 = Convert.ToDouble(Console.ReadLine());
+
+                    Console.WriteLine("Сума: " + (number1 + number2));
+                    Console.WriteLine("Різниця: " + (number1 - number2));
+                    Console.WriteLine("Добуток: " + (number1 * number2));
+                    Console.WriteLine("Частка: " + (number1 / number2));
+                }
+                catch (FormatException)
+                {
+                    Console.WriteLine("введіть число.");
+                }
+
+
+
+
 
             }
 
@@ -166,16 +193,26 @@
             static void YearOfBirth() /*9. Створіть програму, яка запитує в користувача його рік народження та обчислює його вік.*/
             {
 
-                Console.WriteLine("Год рождения:");
-
-                int yearOfBirth = Convert.ToInt32(Console.ReadLine());
-
-                int currentYear = DateTime.Now.Year;
-
-                int age = currentYear - yearOfBirth;
 
 
-                Console.WriteLine("Ваш вік: " + age);
+                try
+                {
+                    Console.WriteLine("Год рождения:");
+
+                    int yearOfBirth = Convert.ToInt32(Console.ReadLine());
+
+                    int currentYear = DateTime.Now.Year;
+
+                    int age = currentYear - yearOfBirth;
+
+
+                    Console.WriteLine("Ваш вік: " + age);
+                }
+                catch (FormatException)
+                {
+                    Console.WriteLine("введіть число.");
+                }
+
 
             }
 
@@ -187,15 +224,22 @@
 
             static void HypotenuseSquare() /*11.Конвертор валюти*/
             {
+                try
+                {
+                    Console.WriteLine("Кількість долларів:");
+                    double dollars = Convert.ToDouble(Console.ReadLine());
 
-                Console.WriteLine("Кількість долларів:");
-                double dollars = Convert.ToDouble(Console.ReadLine());
+                    double exchangeRate = 38.23;
 
-                double exchangeRate = 38.23;
+                    double uah = dollars * exchangeRate;
 
-                double uah = dollars * exchangeRate;
+                    Console.WriteLine(uah + " Гривень");
+                }
+                catch (FormatException)
+                {
+                    Console.WriteLine("введіть число.");
+                }
 
-                Console.WriteLine(uah + " Гривень");
             }
 
 
@@ -209,18 +253,30 @@
             static void UsaSystemtoCm() /*12.Створіть програму, яка запитує в користувача його зріст у футах та дюймах*/
             {
 
-                Console.Write("Зріст у футах:");
-                double feet = Convert.ToDouble(Console.ReadLine());
+                try
+                {
+                    Console.Write("Зріст у футах:");
+                    double feet = Convert.ToDouble(Console.ReadLine());
 
-                Console.WriteLine("Зріст у дюймах:");
-                double inches = Convert.ToDouble(Console.ReadLine());
+                    Console.WriteLine("Зріст у дюймах:");
+                    double inches = Convert.ToDouble(Console.ReadLine());
 
-                double cmPerFoot = 30.48;
-                double cmPerInch = 2.54;
+                    double cmPerFoot = 30.48;
+                    double cmPerInch = 2.54;
 
-                double totalHeightCm = (feet * cmPerFoot) + (inches * cmPerInch);
+                    double totalHeightCm = (feet * cmPerFoot) + (inches * cmPerInch);
 
-                Console.WriteLine("Ваш зріст у сантиметрах: " + totalHeightCm);
+                    Console.WriteLine("Ваш зріст у сантиметрах: " + totalHeightCm);
+                }
+                catch (FormatException)
+                {
+                    Console.WriteLine("введіть число.");
+                }
+
+
+
+
+
             }
 
 
